@@ -10,7 +10,7 @@ def koneksi_sheets(nama_sheet):
     creds = ServiceAccountCredentials.from_json_keyfile_name("Data.json", scope)
     client = gspread.authorize(creds)
     # Membuka spreadsheet berdasarkan nama baru yang Anda minta
-    return client.open("Warung Pecel Pincuk Mbo Suti").worksheet(nama_sheet)
+    return client.open_by_key(12mPJIB636ClHcYqCyjxxyMIGWDJFaVZVCfjhexGdwjQ).worksheet(nama_sheet)
 
 try:
     sheet_menu = koneksi_sheets("Master_Menu")
